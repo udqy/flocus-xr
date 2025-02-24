@@ -47,7 +47,7 @@ public class Pomodoro : MonoBehaviour
     public void ToggleStartPause()
     {
         isRunning = !isRunning;
-        startPauseButtonText.text = isRunning ? "Pause" : "Start";
+        startPauseButtonText.text = isRunning ? "pause" : "start";
     }
 
     public void ResetTimer()
@@ -55,13 +55,13 @@ public class Pomodoro : MonoBehaviour
         isRunning = false;
         currentTime = isWorkMode ? workMinutes * 60 : breakMinutes * 60;
         UpdateTimerDisplay();
-        startPauseButtonText.text = "Start";
+        startPauseButtonText.text = "start";
     }
 
     public void ToggleMode()
     {
         isWorkMode = !isWorkMode;
-        modeToggleButtonText.text = isWorkMode ? "Break" : "Work";
+        modeToggleButtonText.text = isWorkMode ? "break" : "work";
         ResetTimer();
     }
 
